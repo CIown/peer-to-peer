@@ -63,10 +63,10 @@
                  */
                  function initialize() {
                     // Create own peer object with connection to shared PeerJS server
-                    peer = new Peer('receiver', {
+                    peer = new Peer('qidi', {
                         debug: 2,
                         config: {'iceServers':[
-                            {url: 'stun: stun.l.google.com：19302'}
+                            {url: 'stun:stunserver.org'}
                         ]}
                     });
 

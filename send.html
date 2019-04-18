@@ -76,8 +76,11 @@
                  */
                 function initialize() {
                     // Create own peer object with connection to shared PeerJS server
-                    peer = new Peer(null, {
-                        debug: 2
+                    peer = new Peer('sender', {
+                        debug: 2,
+                        config: {'iceServers':[
+                            {url: 'stun: stun.l.google.com：19302'}
+                        ]}
                     });
 
                     peer.on('open', function (id) {
